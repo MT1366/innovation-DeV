@@ -1,0 +1,191 @@
+.menu-btn {
+  display: block;
+  flex-direction: row;
+  z-index: 2000;
+  position: relative;
+  left: -2rem;
+  top: -5px;
+  color: white;
+}
+
+.button-menu {
+  color: white;
+}
+
+.close-menu {
+  color: white;
+}
+
+.loader {
+  position: fixed;
+  top: 20rem;
+  left: 22rem;
+}
+
+.close-menu {
+  display: block;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  transition: all 0.5s;
+}
+
+.menu-btn a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: all 1s;
+}
+
+/* .navigation {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      position: fixed;
+      z-index: 100000;
+    } */
+
+.navbar {
+  position: absolute;
+  top: 0rem;
+  z-index: 1000;
+  letter-spacing: 1px;
+  background-color: white;
+  display: inline-block;
+  /* width: 100%; */
+  animation: cascadeFade 0.5s;
+  margin: 5rem 0;
+}
+
+/* .navbar li {
+      animation: cascadeFade 0.5s;
+    } */
+
+@keyframes cascadeFade {
+  0% {
+    height: 0px;
+  }
+
+  50% {
+    height: 45vh;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* .show {
+      display: block;
+    } */
+
+/* .navbar li {
+      display: flex;
+      justify-content: center;
+    } */
+
+.navbar a {
+  color: #000a11;
+  display: inline-block;
+  /* margin: 2px; */
+  /* animation: cascadeFade 0.5s; */
+}
+
+.content .para {
+  display: block;
+  top: 65%;
+  left: 25%;
+}
+
+.aboute-me {
+  display: block;
+  position: relative;
+  z-index: 10000;
+  padding: 0;
+  margin: 0;
+}
+
+.aboute-me .img {
+  display: block;
+  position: relative;
+  margin: 0;
+  text-align: center;
+}
+
+.bio {
+  display: block;
+  margin: 6rem 1rem;
+}
+
+.bio-txt {
+  position: relative;
+  top: 0rem;
+  left: 0rem;
+}
+
+.box {
+  width: 100vw;
+}
+
+.services {
+  display: block;
+  position: relative;
+}
+
+.row input,
+.row-two textarea {
+  position: relative;
+  width: 100%;
+}
+
+.box-port .images {
+  position: relative;
+  width: 100vh;
+}
+
+#blog-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around;
+      margin: 2rem 7rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-family: montserrat; */
+}
+
+.contact-container {
+  display: flex;
+  /* position: relative; */
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 5rem;
+}
+
+.row {
+  display: block;
+}
+
+.button {
+  display: block;
+  position: relative;
+  left: 1rem;
+}
+
+.arrow-right {
+  left: 39rem;
+  z-index: 10000000;
+}
+
+.arrow-left {
+  left: -5rem;
+  z-index: 10000000;
+}
