@@ -1,6 +1,6 @@
 "use strict";
 
-////////////////// Navigation //////////////////////
+////////////////// Navigation Buttons //////////////////////
 
 let homeBtn = document.querySelector("#home");
 let aboutBtn = document.querySelector("#about");
@@ -10,8 +10,17 @@ let clientBtn = document.querySelector("#clients");
 let blogBtn = document.querySelector("#blog");
 let contactBtn = document.querySelector("#contact");
 
+////////////////// Navigation SECTIONS //////////////////////
+const abouteMeSection = document.querySelector(".aboute-me");
+const servicesSection = document.querySelector(".services");
+const poertfolioSection = document.querySelector(".portfolio");
+const testemonialSection = document.querySelector(".testemonial");
+const blogSection = document.querySelector(".blog-container");
+const contactSection = document.querySelector(".contact-us");
+
+////////////////////////////////////////////////////////////
 const PutBorderAboutBtn = function () {
-  aboutBtn.style.borderBottom = "2px solid black";
+  aboutBtn.style.borderBottom = "2px solid white";
 };
 
 const removeBorderAboutBtn = function () {
@@ -26,31 +35,31 @@ const removeBorderServiceBtn = function () {
 
 homeBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
-  aboutBtn.style.borderBottom = "none";
+  aboutBtn.style.borderBottom = "2px solid white";
 });
 
 ///////////////////////////////////////////////
 aboutBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 700, behavior: "smooth" });
-  aboutBtn.style.borderBottom = "2px solid black";
+  abouteMeSection.scrollIntoView({ behavior: "smooth" });
+  aboutBtn.style.borderBottom = "none";
 });
 
 window.addEventListener("scroll", function () {
   if (window.pageYOffset >= 700) {
-    aboutBtn.style.borderBottom = "2px solid black";
+    aboutBtn.style.borderBottom = "2px solid white";
   } else aboutBtn.style.borderBottom = "none";
 });
 
 ///////////////////////////////////////////////
 servicesBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 1400, behavior: "smooth" });
-  servicesBtn.style.borderBottom = "2px solid black";
+  servicesSection.scrollIntoView({ behavior: "smooth" });
+  servicesBtn.style.borderBottom = "2px solid white";
   aboutBtn.style.borderBottom = "none";
 });
 
 window.addEventListener("scroll", function () {
   if (window.pageYOffset >= 1400) {
-    servicesBtn.style.borderBottom = "2px solid black";
+    servicesBtn.style.borderBottom = "2px solid white";
     aboutBtn.style.borderBottom = "none";
   } else {
     servicesBtn.style.borderBottom = "none";
@@ -60,13 +69,13 @@ window.addEventListener("scroll", function () {
 ////////////////////////////////////////////////
 
 workBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 2350, behavior: "smooth" });
-  workBtn.style.borderBottom = "2px solid black";
+  poertfolioSection.scrollIntoView({ behavior: "smooth" });
+  workBtn.style.borderBottom = "2px solid white";
 });
 
 window.addEventListener("scroll", function () {
   if (window.pageYOffset >= 2350) {
-    workBtn.style.borderBottom = "2px solid black";
+    workBtn.style.borderBottom = "2px solid white";
     aboutBtn.style.borderBottom = "none";
     servicesBtn.style.borderBottom = "none";
   } else {
@@ -77,13 +86,13 @@ window.addEventListener("scroll", function () {
 ////////////////////////////////////////////////
 
 clientBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 3600, behavior: "smooth" });
-  clientBtn.style.borderBottom = "2px solid black";
+  testemonialSection.scrollIntoView({ behavior: "smooth" });
+  clientBtn.style.borderBottom = "2px solid white";
 });
 
 window.addEventListener("scroll", (e) => {
   if (window.pageYOffset >= 3400) {
-    clientBtn.style.borderBottom = "2px solid black";
+    clientBtn.style.borderBottom = "2px solid white";
     aboutBtn.style.borderBottom = "none";
     servicesBtn.style.borderBottom = "none";
     workBtn.style.borderBottom = "none";
@@ -95,13 +104,13 @@ window.addEventListener("scroll", (e) => {
 ////////////////////////////////////////////////
 
 blogBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 4300, behavior: "smooth" });
-  blogBtn.style.borderBottom = "2px solid black";
+  blogSection.scrollIntoView({ behavior: "smooth" });
+  blogBtn.style.borderBottom = "2px solid white";
 });
 
 window.addEventListener("scroll", (e) => {
   if (window.pageYOffset >= 4150) {
-    blogBtn.style.borderBottom = "2px solid black";
+    blogBtn.style.borderBottom = "2px solid white";
     aboutBtn.style.borderBottom = "none";
     servicesBtn.style.borderBottom = "none";
     workBtn.style.borderBottom = "none";
@@ -114,13 +123,13 @@ window.addEventListener("scroll", (e) => {
 ////////////////////////////////////////////////
 
 contactBtn.addEventListener("click", function () {
-  window.scrollTo({ top: 5000, behavior: "smooth" });
-  contactBtn.style.borderBottom = "2px solid black";
+  contactSection.scrollIntoView({ behavior: "smooth" });
+  contactBtn.style.borderBottom = "2px solid white";
 });
 
 window.addEventListener("scroll", (e) => {
   if (window.pageYOffset >= 4800) {
-    contactBtn.style.borderBottom = "2px solid black";
+    contactBtn.style.borderBottom = "2px solid white";
     aboutBtn.style.borderBottom = "none";
     servicesBtn.style.borderBottom = "none";
     workBtn.style.borderBottom = "none";
@@ -170,44 +179,21 @@ let closeMenu = document
     navClose.classList.add("hidden");
   });
 
-// let homeBtn = document.querySelector("#home");
-// let aboutBtn = document.querySelector("#about");
-// let servicesBtn = document.querySelector("#services");
-// let workBtn = document.querySelector("#works");
-// let clientBtn = document.querySelector("#clients");
-// let blogBtn = document.querySelector("#blog");
-// let contactBtn = document.querySelector("#contact");
+// BETTER PERFORMANCE
 
-window.addEventListener("scroll", function () {
-  if (this.window.scrollY > 680) {
-    navigation.style.backgroundColor = "#eee";
-    logo.style.color = "black";
+const head = document.querySelector(".head");
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) navigation.classList.add("sticky");
+  else navigation.classList.remove("sticky");
+};
 
-    aboutBtn.style.color = "black";
-    homeBtn.style.color = "black";
-    servicesBtn.style.color = "black";
-    workBtn.style.color = "black";
-    clientBtn.style.color = "black";
-    blogBtn.style.color = "black";
-    contactBtn.style.color = "black";
-
-    swapCollorToBlack();
-  }
-  if (this.window.scrollY < 680) {
-    navigation.style.backgroundColor = "";
-    navigation.style.color = "black";
-    logo.style.color = "white";
-
-    aboutBtn.style.color = "white";
-    homeBtn.style.color = "white";
-    servicesBtn.style.color = "white";
-    workBtn.style.color = "white";
-    clientBtn.style.color = "white";
-    blogBtn.style.color = "white";
-    contactBtn.style.color = "white";
-    swapCollorToWhite();
-  }
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0.1,
 });
+
+headerObserver.observe(head);
 
 /////////////////// Animatted typing /////////////////////
 
@@ -248,15 +234,6 @@ function loop() {
   setTimeout(loop, 80);
 }
 loop();
-
-// const textDisplay = document.getElementById("text");
-
-// var typed = new typed(".text", {
-//   strings: ["hi", "by"],
-//   typeSpeed: 30,
-// });
-
-// console.log(typed);
 
 ///////////////// Portfolio //////////////////
 

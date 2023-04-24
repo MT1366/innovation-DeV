@@ -130,6 +130,12 @@ a {
   z-index: 9000;
 }
 
+.sticky {
+  position: fixed;
+  background-color: rgba(186, 25, 25, 0.95);
+  color: #000a11;
+}
+
 .logo {
   z-index: 10;
   letter-spacing: 6px;
