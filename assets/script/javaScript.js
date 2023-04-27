@@ -19,28 +19,12 @@ const blogSection = document.querySelector(".blog-container");
 const contactSection = document.querySelector(".contact-us");
 
 ////////////////////////////////////////////////////////////
-// BETTER PERFORMANCE
-
-const head = document.querySelector(".head");
-
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) navigation.classList.add("sticky");
-  else navigation.classList.remove("sticky");
-};
-
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0.1,
-});
-
-headerObserver.observe(head);
 
 ////////////// Scroll Event ///////////////////
 
 homeBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
-  homeBtn.style.borderBottom = "2px solid white";
+  aboutBtn.style.borderBottom = "2px solid white";
 });
 
 ///////////////////////////////////////////////
@@ -183,6 +167,23 @@ let closeMenu = document
     nav.classList.add("hidden");
     navClose.classList.add("hidden");
   });
+
+// BETTER PERFORMANCE
+
+const head = document.querySelector(".head");
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) navigation.classList.add("sticky");
+  else navigation.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0.1,
+});
+
+headerObserver.observe(head);
 
 /////////////////// Animatted typing /////////////////////
 

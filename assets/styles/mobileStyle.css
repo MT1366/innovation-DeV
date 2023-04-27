@@ -133,10 +133,6 @@
   color: white;
 }
 
-.navigation {
-  display: none;
-}
-
 .aboute-me {
   display: flex;
   flex-direction: column-reverse;
@@ -253,11 +249,10 @@
 
 .button {
   position: relative;
-  display: flex;
-  width: 89%;
-  left: 2rem;
+  display: block;
+  width: 86%;
+  left: 2.6rem;
   border-radius: 5px;
-  padding: 8px;
   transition: all 0.3s;
   border: 1px solid #1c1c1c;
   font-family: poppins;
