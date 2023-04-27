@@ -63,6 +63,11 @@ a {
   }
 } */
 
+.navigation__checkbox {
+  display: none;
+  transform: all 0.5s;
+}
+
 .loader {
   border: 10px solid #f3f3f3;
   position: fixed;
@@ -147,6 +152,7 @@ a {
 
 .navbar {
   list-style: none;
+
   align-items: center;
   gap: 3rem;
   transition: all 0.5s;
@@ -942,7 +948,7 @@ a {
 @keyframes iconFade {
   0% {
     opacity: 0;
-    top: 11rem;
+    top: 10.4rem;
   }
 
   100% {

@@ -1,0 +1,268 @@
+.loader {
+  top: 20rem;
+  left: 18rem;
+}
+
+.navigation__button {
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+  position: fixed;
+  top: 3rem;
+  right: 2rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navigation__checkbox {
+  display: none;
+  transform: all 0.5s;
+}
+
+.navigation__icon {
+  position: absolute;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  position: relative;
+  margin-top: 1rem;
+  width: 1rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+  content: "";
+  position: relative;
+  left: 0;
+  top: 4rem;
+  transition: all 0.2s;
+}
+
+.navigation__icon::before {
+  top: -2.3rem;
+}
+.navigation__icon::after {
+  top: -8.8rem;
+}
+
+.navigation__button:hover .navigation__icon::before {
+  top: -2.4rem;
+}
+
+.navigation__button:hover .navigation__icon::after {
+  top: -8.7rem;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(45deg);
+  top: -2.1rem;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  transform: rotate(-45deg);
+  top: -9.1rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  top: 3rem;
+  left: 14.5rem;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+
+  background: rgba(49, 49, 49, 0.3);
+  z-index: -1;
+  padding: 15px 16px;
+  margin: 55px 0px;
+  opacity: 0.7;
+  top: -7.5rem;
+  border-radius: 50%;
+  left: 15px;
+}
+
+.links img {
+  color: white;
+  width: 50px;
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -4.7rem;
+
+  left: 5px;
+  font-size: 0.8rem;
+}
+
+.icons {
+  color: white;
+  margin: 18px;
+  top: -5px;
+  left: -5px;
+  font-size: 14px;
+  position: relative;
+}
+
+.icons::before {
+  content: "";
+  gap: 2px;
+  position: absolute;
+  padding: 8px 7px;
+  /* margin: 5px 4px */
+  background-color: #000a11;
+  border-radius: 50%;
+  z-index: -1;
+  color: white;
+}
+
+.navigation {
+  display: none;
+}
+
+.aboute-me {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 2rem 5rem;
+
+  justify-content: space-around;
+  position: relative;
+}
+
+.img {
+  display: none;
+  flex-direction: row;
+  position: relative;
+  margin: 1.5rem;
+  width: 100vw;
+}
+
+.portfolio-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0rem 2rem;
+}
+
+.box-port .images {
+  width: 30vh;
+  /* margin: 1rem 1rem; */
+  border-radius: 5px;
+  /* animation: picFade 0.5s ease; */
+}
+
+.box-port::after {
+  content: "";
+  position: absolute;
+  flex-direction: column;
+  top: 1.5rem;
+  left: 1.4rem;
+  background-color: rgb(250, 248, 248);
+  width: 82%;
+  height: 80%;
+  opacity: 0.9;
+  display: none;
+  transition: all 0.5s;
+}
+
+.icon-title {
+  top: 1rem;
+  left: 5rem;
+}
+
+.port-icon {
+  /* top: 5.5rem; */
+  left: 7rem;
+  margin: 0 auto;
+}
+
+.port-icon img {
+  width: 25px;
+}
+
+.contact-container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5rem 0;
+}
+
+.contact-box {
+  display: flex;
+  position: relative;
+  border-radius: 5px;
+  justify-content: center;
+  /* padding: 2rem 2rem; */
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.contact-add {
+  display: block;
+  position: absolute;
+  width: 70vh;
+  top: 6rem;
+  font-size: 0.8rem;
+  left: -4rem;
+  color: black;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 2rem 1rem; */
+  /* gap: 1rem; */
+}
+
+.contact-form input {
+  width: 70vh;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f4f4f4;
+  font-family: poppins;
+}
+
+.text-row textarea {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f4f4f4;
+  width: 70vh;
+  font-family: poppins;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  width: 89%;
+  left: 2rem;
+  border-radius: 5px;
+  padding: 8px;
+  transition: all 0.3s;
+  border: 1px solid #1c1c1c;
+  font-family: poppins;
+  font-size: 12px;
+  /* top: -1rem; */
+  background-color: #111;
+  color: white;
+}
