@@ -168,22 +168,6 @@ let nav = document.querySelectorAll(".navbar li");
 let navClose = document.querySelector(".close-menu");
 let menuBtn = document.querySelector(".button-menu");
 
-let openMenu = document
-  .querySelector(".button-menu")
-  .addEventListener("click", function () {
-    menuBtn.classList.add("hidden");
-    nav.classList.remove("hidden");
-    navClose.classList.remove("hidden");
-  });
-
-let closeMenu = document
-  .querySelector(".close-menu")
-  .addEventListener("click", function () {
-    menuBtn.classList.remove("hidden");
-    nav.classList.add("hidden");
-    navClose.classList.add("hidden");
-  });
-
 /////////////////// Animatted typing /////////////////////
 
 const textDisplay = document.getElementById("text");
