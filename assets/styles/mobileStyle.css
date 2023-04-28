@@ -81,6 +81,7 @@
   line-height: 1;
   top: 3rem;
   left: 14.5rem;
+  width: 0;
 }
 
 .icon::before {

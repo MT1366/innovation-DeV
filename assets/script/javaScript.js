@@ -19,12 +19,23 @@ const blogSection = document.querySelector(".blog-container");
 const contactSection = document.querySelector(".contact-us");
 
 ////////////////////////////////////////////////////////////
+// const PutBorderAboutBtn = function () {
+//   aboutBtn.style.borderBottom = "2px solid white";
+// };
+
+// const removeBorderAboutBtn = function () {
+//   aboutBtn.style.borderBottom = "";
+// };
+
+// const removeBorderServiceBtn = function () {
+//   servicesBtn.style.borderBottom = "";
+// };
 
 ////////////// Scroll Event ///////////////////
 
 homeBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
-  aboutBtn.style.borderBottom = "2px solid white";
+  homeBtn.style.borderBottom = "2px solid white";
 });
 
 ///////////////////////////////////////////////
@@ -174,8 +185,8 @@ const head = document.querySelector(".head");
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) navigation.classList.add("sticky");
-  else navigation.classList.remove("sticky");
+  if (!entry.isIntersecting) head.classList.add("sticky");
+  else navigation.classList.add("sticky");
 };
 
 const headerObserver = new IntersectionObserver(stickyNav, {
